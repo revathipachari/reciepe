@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Recipe Card</title>
+    <link rel="stylesheet" href="reciepe.css">
+</head>
+<body>
+
+<div class="recipe-card">
+    <h1>Chocolate Cake</h1>
+
+    <!-- Recipe Image -->
+    <div class="recipe-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1hnoufytbNC9QEjkO3714EbZLDAABE0lWfQ&s" alt="Chocolate Cake">
+    </div>
+
+    <!-- Preparation Time and Serving Size -->
+    <div class="info">
+        <p><strong>Preparation Time:</strong> 45 minutes</p>
+        <p><strong>Servings:</strong> 8 slices</p>
+    </div>
+
+    <!-- Ingredients List -->
+    <button class="toggle-btn" onclick="toggleIngredients()">Show Ingredients</button>
+    <ul id="ingredients" class="hidden">
+        <li>2 cups all-purpose flour</li>
+        <li>1 ¾ cups sugar</li>
+        <li>¾ cup cocoa powder</li>
+        <li>2 tsp baking powder</li>
+        <li>1 ½ tsp baking soda</li>
+        <li>2 large eggs</li>
+        <li>1 cup milk</li>
+        <li>½ cup vegetable oil</li>
+    </ul>
+
+    <!-- Steps Section -->
+    <button class="toggle-btn" onclick="toggleSteps()">Show Steps</button>
+    <ol id="steps" class="hidden">
+        <li>Preheat the oven to 350°F (175°C).</li>
+        <li>Mix dry ingredients in a large bowl.</li>
+        <li>Add eggs, milk, and oil. Mix well.</li>
+        <li>Pour batter into greased pans and bake for 30 minutes.</li>
+        <li>Let the cake cool, then frost as desired.</li>
+    </ol>
+
+    <!-- Start Cooking Button and Progress -->
+    <div class="cooking-progress">
+        <button onclick="startCooking()">Start Cooking</button>
+        <button onclick="nextStep()">Next Step</button>
+        <div class="progress-bar">
+            <div id="progress" class="progress"></div>
+        </div>
+    </div>
+</div>
+<button onclick="window.print()">Print Recipe</button>
+
+
+<script src="reciepe.js"></script>
+
+</body>
+</html>
